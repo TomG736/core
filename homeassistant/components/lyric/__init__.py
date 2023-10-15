@@ -148,6 +148,7 @@ class LyricEntity(CoordinatorEntity[DataUpdateCoordinator[Lyric]]):
     @property
     def device(self) -> LyricDevice:
         """Get the Lyric Device."""
+        print(self.location.devices_dict[self._mac_id])
         return self.location.devices_dict[self._mac_id]
 
 

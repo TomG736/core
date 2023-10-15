@@ -128,6 +128,7 @@ async def async_setup_entry(
 
     for location in coordinator.data.locations:
         for device in location.devices:
+            print(device)
             entities.append(
                 LyricClimate(
                     coordinator,
